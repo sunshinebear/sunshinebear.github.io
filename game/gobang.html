@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>五子棋</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="./dist/main.css">
+</head>
+<body>
+<h1>五子棋</h1>
+<div class="selectMode">
+    <label for="selectMode">选择模式:</label>
+    <select name="selectMode" id="selectMode">
+        <option value="1">双人对战</option>
+        <option value="2">电脑版本</option>
+    </select>
+</div>
+<div class="board-outer">
+    <div class="board" id="board">
+    </div>
+</div>
+
+<div class="status">
+</div>
+<div class="btns">
+    <a href="javascript:;" class="btn_primary" id='start'>开始</a>
+    <a href="javascript:;" class="btn_warn" id='fail'>认输</a>
+    <a href="javascript:;" class="btn_default" id='back'>悔棋</a>
+    <a href="javascript:;" class="btn_tips" id='forward'>撤销悔棋</a>
+</div>
+<div id="alert" style="display: none">
+    <div id="alertContent">
+
+    </div>
+    <a href="javascript:;" id="alertBtn">确定</a>
+</div>
+<script src='./lib/util.js?r=20171021'></script>
+<script src='./dist/main.js?r=20171021'></script>
+</body>
+</html>

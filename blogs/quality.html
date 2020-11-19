@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>代码质量 | 尹邵龙的博客</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="Blog">
+    <link rel="preload" href="/assets/css/0.styles.3c60507a.css" as="style"><link rel="preload" href="/assets/js/app.01490768.js" as="script"><link rel="preload" href="/assets/js/2.13ef3b3f.js" as="script"><link rel="preload" href="/assets/js/9.e63cd41e.js" as="script"><link rel="prefetch" href="/assets/js/10.eb4e8b82.js"><link rel="prefetch" href="/assets/js/11.6e75fc57.js"><link rel="prefetch" href="/assets/js/12.6fb9bc2b.js"><link rel="prefetch" href="/assets/js/13.4163d664.js"><link rel="prefetch" href="/assets/js/14.9d5a9176.js"><link rel="prefetch" href="/assets/js/15.4f040164.js"><link rel="prefetch" href="/assets/js/16.5a15b46b.js"><link rel="prefetch" href="/assets/js/17.67ffb5c4.js"><link rel="prefetch" href="/assets/js/18.66ac5882.js"><link rel="prefetch" href="/assets/js/3.387cb282.js"><link rel="prefetch" href="/assets/js/4.b478c532.js"><link rel="prefetch" href="/assets/js/5.6dbcdc06.js"><link rel="prefetch" href="/assets/js/6.1a563297.js"><link rel="prefetch" href="/assets/js/7.88336596.js"><link rel="prefetch" href="/assets/js/8.8514ae46.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3c60507a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">尹邵龙的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="代码质量"><a href="#代码质量" class="header-anchor">#</a> 代码质量</h1> <h2 id="好的代码特性-clean"><a href="#好的代码特性-clean" class="header-anchor">#</a> 好的代码特性：clean</h2> <ol><li>cohesive 高内聚</li> <li>loosely coupled: 松耦合，实体之间更容易测试、复用、扩展</li> <li>encapsulated: 封装良好</li> <li>Assertive 行为和依赖的数据放在一起</li> <li>Nonredundant: 无冗余，只在一个地方修复bug和进行修改</li></ol> <h2 id="代码可维护性"><a href="#代码可维护性" class="header-anchor">#</a> 代码可维护性</h2> <ol><li>可测性
+<ul><li>函数不能太复杂</li> <li>不能有太多参数</li> <li>表格式不能太复杂</li></ul></li> <li>可变更性
+<ul><li>源文件不能有重复代码块</li> <li>控制流“if” 不能嵌套太深</li> <li>类不能与其他的类耦合</li> <li>不能使用魔数</li> <li>switch 不能有太多的case</li></ul></li> <li>可读性
+<ul><li>函数不能有太行</li> <li>代码不应该被注释</li> <li>注释不能放在代码行的行末</li></ul></li></ol> <h2 id="差的代码"><a href="#差的代码" class="header-anchor">#</a> 差的代码</h2> <ol><li>对象函数
+<ul><li>过长函数，</li> <li>过长参数列表 通过引入参数对象解决</li> <li>基本类型偏执 以对象取代基本类型</li> <li>重复的switch 用策略模式代替if/switch 用表驱动，责任链的模式</li> <li>if语句嵌套太深 抽取方法+卫语句</li> <li>循环语句 以管道取代循环</li></ul></li> <li>对象数据
+<ul><li>神秘命名</li> <li>全局数据</li> <li>可变数据</li> <li>数据泥团</li> <li>临时字段</li> <li>纯数据类</li></ul></li> <li>对象关系
+<ul><li>发散式变化 类的功能过多</li> <li>散弹式修改 修改一个功能，需要修改多个子类</li> <li>依恋情结 从另外对象调用了大量取值函数</li> <li>夸夸其谈通用性 遵循合适原则，不过度设计</li> <li>过长的消息链</li> <li>中间人</li> <li>内幕交易 将公共子类提炼出来</li> <li>被拒绝的馈赠 以委托取代继承</li></ul></li> <li>其他问题
+<ul><li>重复代码</li> <li>冗余的元素</li> <li>过大的类</li> <li>异曲同工的类</li> <li>注释</li></ul></li></ol> <h2 id="需要掌握的知识"><a href="#需要掌握的知识" class="header-anchor">#</a> 需要掌握的知识</h2> <ol><li>设计模式</li> <li>设计原则 solid原则</li> <li>方法学 devops,极限编程,scrum,结构化分析，设计</li> <li>实践 测试驱动开发，面向对象设计，结构化编程，函数式编程，持续集成，结对编程</li></ol> <h2 id="review的书籍"><a href="#review的书籍" class="header-anchor">#</a> review的书籍</h2> <ul><li>《敏捷软件开发，原则、模式与实践》</li> <li>《代码整洁之道》</li> <li>《重构--改善既有代码的设计》</li> <li>《设计模式》</li> <li>《软件设计重构》</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.01490768.js" defer></script><script src="/assets/js/2.13ef3b3f.js" defer></script><script src="/assets/js/9.e63cd41e.js" defer></script>
+  </body>
+</html>
